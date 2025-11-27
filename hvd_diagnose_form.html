@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="da">
+<head>
+<meta charset="utf-8"/>
+<title>HVD Remote Diagnostics – Diagnoseformular</title>
+<style>
+    body {font-family: Arial, sans-serif; margin: 20px; line-height: 1.5; background-color: #f8f8f8;}
+    h1 {text-align: center;}
+    form {background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 800px; margin: auto;}
+    fieldset {border: none; margin-bottom: 20px; padding: 0;}
+    legend {font-weight: bold; margin-bottom: 10px;}
+    label {display: block; margin-bottom: 5px; font-weight: bold;}
+    input[type="text"], input[type="email"], input[type="number"], select, textarea {
+        width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;
+        box-sizing: border-box;
+    }
+    textarea {resize: vertical; min-height: 80px;}
+    input[type="file"] {margin-bottom: 10px;}
+    .priority {display: flex; gap: 20px;}
+    .priority label {font-weight: normal;}
+    button {background-color: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;}
+    button:hover {background-color: #0056b3;}
+
+    /* Color accents for fieldsets */
+    fieldset.contact {border-left: 4px solid #0275d8; padding-left: 15px;}
+    fieldset.vehicle {border-left: 4px solid #5bc0de; padding-left: 15px;}
+    fieldset.symptom {border-left: 4px solid #f0ad4e; padding-left: 15px;}
+    fieldset.dtc {border-left: 4px solid #d9534f; padding-left: 15px;}
+    fieldset.logs {border-left: 4px solid #5bc0de; padding-left: 15px;}
+    fieldset.media {border-left: 4px solid #d9a319; padding-left: 15px;}
+    fieldset.history {border-left: 4px solid #5cb85c; padding-left: 15px;}
+    fieldset.equipment {border-left: 4px solid #5cb85c; padding-left: 15px;}
+    fieldset.priority {border-left: 4px solid #f0ad4e; padding-left: 15px;}
+    legend span.icon {margin-right: 6px;}
+
+    .friendly-note { color: #555; font-size: 0.9em; font-style: italic; margin-bottom: 15px; }
+    .intro { color: #333; font-size: 1em; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<h1>Indsend diagnoseoplysninger</h1>
+<form action="https://formspree.io/f/your-endpoint" enctype="multipart/form-data" method="POST">
+    <p class="intro">Udfyld formularen nedenfor for at beskrive bilen og fejlen.</p>
+    <p class="friendly-note">Jo mere udførlige oplysninger du giver, jo bedre kan vi tilpasse vores test‑ og måleplan, og jo større er chancen for et hurtigt, præcist resultat.</p>
+<fieldset class="contact">
+<legend><span class="icon">📞</span>1. Kontaktoplysninger</legend>
+<label for="workshop">Værksted*</label>
+<input id="workshop" name="Værksted" required="" type="text"/>
+<label for="contact">Kontaktperson*</label>
+<input id="contact" name="Kontaktperson" required="" type="text"/>
+<label for="email">E‑mail*</label>
+<input id="email" name="Email" required="" type="email"/>
+<label for="phone">Telefon</label>
+<input id="phone" name="Telefon" type="text"/>
+</fieldset>
+<fieldset class="vehicle">
+<legend><span class="icon">🚗</span>2. Bilgrunddata</legend>
+<label for="vin">VIN*</label>
+<input id="vin" name="VIN" required="" type="text"/>
+<label for="make">Mærke*</label>
+<input id="make" name="Mærke" required="" type="text"/>
+<label for="model">Model*</label>
+<input id="model" name="Model" required="" type="text"/>
+<label for="year">Årgang*</label>
+<input id="year" max="2100" min="1900" name="Årgang" required="" type="number"/>
+<label for="mileage">Kilometer*</label>
+<input id="mileage" min="0" name="Kilometer" required="" type="number"/>
+<label for="fuel">Brændstof*</label>
+<select id="fuel" name="Brændstof" required="">
+<option value="">Vælg...</option>
+<option value="Benzin">Benzin</option>
+<option value="Diesel">Diesel</option>
+<option value="Hybrid">Hybrid</option>
+<option value="El">El</option>
+<option value="Andet">Andet</option>
+</select>
+<label for="transmission">Gearkasse*</label>
+<select id="transmission" name="Gearkasse" required="">
+<option value="">Vælg...</option>
+<option value="Manuel">Manuel</option>
+<option value="Automat">Automat</option>
+<option value="CVT">CVT</option>
+<option value="Andet">Andet</option>
+</select>
+<label for="market">Marked*</label>
+<input id="market" name="Marked" placeholder="Fx DK, EU" required="" type="text"/>
+</fieldset>
+<fieldset class="symptom">
+<legend><span class="icon">📝</span>3. Symptombeskrivelse</legend>
+<label for="symptom">Beskriv fejlen*</label>
+<textarea id="symptom" name="Symptombeskrivelse" placeholder="Hvornår/hvordan viser fejlen sig? Under hvilke forhold? Er den reproducerbar?" required=""></textarea>
+</fieldset>
+<fieldset class="dtc">
+<legend><span class="icon">⚠️</span>4. DTC &amp; Freeze frames</legend>
+<label for="dtc">Kopiér hele DTC‑listen eller upload en fil</label>
+<textarea id="dtc" name="DTC" placeholder="Indsæt DTC-koder her"></textarea>
+<input id="dtc_file" name="DTC_file" type="file"/>
+</fieldset>
+<fieldset class="logs">
+<legend><span class="icon">📈</span>5. Live‑data / Logs</legend>
+<label for="logs">Upload logfil(er)</label>
+<input id="logs" multiple="" name="Logs" type="file"/>
+<label for="log_desc">Beskrivelse af log</label>
+<textarea id="log_desc" name="Log_beskrivelse" placeholder="Hvornår/hvordan er loggen optaget? Tomgang, belastning osv."></textarea>
+</fieldset>
+<fieldset class="media">
+<legend><span class="icon">📸</span>6. Foto / Video</legend>
+<label for="media">Upload billeder/video</label>
+<input id="media" multiple="" name="Media" type="file"/>
+</fieldset>
+<fieldset class="history">
+<legend><span class="icon">📜</span>7. Historik</legend>
+<label for="history">Tidligere reparationer/forsøg</label>
+<textarea id="history" name="Historik" placeholder="Hvilke dele er udskiftet? Hvilke tests er udført?"></textarea>
+</fieldset>
+<fieldset class="equipment">
+<legend><span class="icon">🔧</span>8. Udstyr &amp; Kompetencer</legend>
+<label for="equipment">Tilgængeligt udstyr</label>
+<textarea id="equipment" name="Udstyr" placeholder="OE-tester, oscilloskop, multimeter, adgang til tekniske data osv."></textarea>
+<label for="experience">Erfaring / kompetenceniveau</label>
+<textarea id="experience" name="Kompetencer" placeholder="Kort beskrivelse af mekanikernes erfaring."></textarea>
+<small style="display:block;color:#555;font-size:0.85em;margin-bottom:10px;">Vi spørger til erfaring og kompetenceniveau for bedre at kunne tilpasse vores diagnoseplan til jeres udstyr og færdigheder. En detaljeret beskrivelse hjælper os med at vælge de rigtige tests og forklaringsniveau.</small>
+</fieldset>
+<fieldset class="priority">
+<legend><span class="icon">⏱️</span>9. Prioritet</legend>
+<div class="priority">
+<label><input checked="" name="Prioritet" type="radio" value="Normal"/> Normal</label>
+<label><input name="Prioritet" type="radio" value="Express"/> Express (haste)</label>
+</div>
+</fieldset>
+<button type="submit">Indsend sag</button>
+</form>
+<p style="margin-top:20px; font-size: 0.9em; color: #555;">Note: Formularens handling (action) peger på en dummy Formspree‑endpoint. Erstat <code>your-endpoint</code> med din egen Formspree‑kode eller anden backend‑URL. Filuploads kræver en backend, som kan håndtere og gemme filerne.</p>
+</body>
+</html>

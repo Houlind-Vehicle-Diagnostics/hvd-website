@@ -51,6 +51,16 @@
 </head>
 <body>
 <h1>Indsend diagnoseoplysninger</h1>
+<!-- Language selector placed top right so users can choose interface language. The actual
+     translation is not implemented here, but it signals that both Danish and English
+     are supported. Additional languages can be added later. -->
+<div style="text-align: right; margin-bottom: 1em;">
+    <label for="language">Sprog / Language:</label>
+    <select id="language" name="language">
+        <option value="da">Dansk</option>
+        <option value="en">English</option>
+    </select>
+</div>
 <form action="https://formsubmit.co/houlindauto@gmail.com" enctype="multipart/form-data" method="POST">
     <p class="intro">Udfyld formularen nedenfor for at beskrive bilen og fejlen.</p>
     <p class="friendly-note">Jo mere udførlige oplysninger du giver, jo bedre kan vi tilpasse vores test‑ og måleplan, og jo større er chancen for et hurtigt, præcist resultat.</p>
@@ -70,9 +80,49 @@
 <label for="vin">VIN<span class="required-star">*</span></label>
 <input id="vin" name="VIN" required="" type="text"/>
 <label for="make">Mærke<span class="required-star">*</span></label>
-<input id="make" name="Mærke" required="" type="text"/>
+<!-- Make (car brand) field now uses a datalist to suggest common manufacturers. Users can still
+     type any value, so they are not locked in if their make is not on the list. -->
+<input id="make" name="Mærke" list="make-list" required type="text"/>
+<datalist id="make-list">
+    <option value="Audi"></option>
+    <option value="BMW"></option>
+    <option value="Mercedes-Benz"></option>
+    <option value="Volkswagen"></option>
+    <option value="Toyota"></option>
+    <option value="Ford"></option>
+    <option value="Opel"></option>
+    <option value="Peugeot"></option>
+    <option value="Renault"></option>
+    <option value="Škoda"></option>
+    <option value="Hyundai"></option>
+    <option value="Kia"></option>
+    <option value="Honda"></option>
+    <option value="Volvo"></option>
+    <option value="Mazda"></option>
+</datalist>
 <label for="model">Model<span class="required-star">*</span></label>
-<input id="model" name="Model" required="" type="text"/>
+<!-- Model field with datalist for some popular vehicle models. Again, users can type any model
+     even if it is not listed. -->
+<input id="model" name="Model" list="model-list" required type="text"/>
+<datalist id="model-list">
+    <option value="Golf"></option>
+    <option value="Passat"></option>
+    <option value="A3"></option>
+    <option value="A4"></option>
+    <option value="A6"></option>
+    <option value="C‑Class"></option>
+    <option value="E‑Class"></option>
+    <option value="3 Series"></option>
+    <option value="5 Series"></option>
+    <option value="Corolla"></option>
+    <option value="Camry"></option>
+    <option value="Civic"></option>
+    <option value="Accord"></option>
+    <option value="Focus"></option>
+    <option value="Fiesta"></option>
+    <option value="Octavia"></option>
+    <option value="Ceed"></option>
+</datalist>
 <label for="year">Årgang<span class="required-star">*</span></label>
 <input id="year" max="2100" min="1900" name="Årgang" required="" type="number"/>
 <label for="mileage">Kilometer<span class="required-star">*</span></label>
@@ -95,7 +145,21 @@
 <option value="Andet">Andet</option>
 </select>
 <label for="market">Marked<span class="required-star">*</span></label>
-<input id="market" name="Marked" placeholder="Fx DK, EU" required="" type="text"/>
+<!-- Market field with datalist for common country/region codes. Users can still enter any
+     market code (e.g. US, UK, EU, DK, SE, NO). -->
+<input id="market" name="Marked" list="market-list" placeholder="Fx DK, EU" required type="text"/>
+<datalist id="market-list">
+    <option value="DK"></option>
+    <option value="DE"></option>
+    <option value="SE"></option>
+    <option value="NO"></option>
+    <option value="NL"></option>
+    <option value="EU"></option>
+    <option value="US"></option>
+    <option value="UK"></option>
+    <option value="FR"></option>
+    <option value="IT"></option>
+</datalist>
 </fieldset>
 <fieldset class="symptom">
 <legend><span class="icon">📝</span>3. Symptombeskrivelse</legend>
@@ -142,6 +206,6 @@
 </fieldset>
 <button type="submit">Indsend sag</button>
 </form>
-<p style="margin-top:20px; font-size: 0.9em; color: #555;">Note: Formularens handling (action) peger på en dummy Formspree‑endpoint. Erstat <code>your-endpoint</code> med din egen Formspree‑kode eller anden backend‑URL. Filuploads kræver en backend, som kan håndtere og gemme filerne.</p>
+<p style="margin-top:20px; font-size: 0.9em; color: #555;">Note: Formularen bruger nu en FormSubmit‑endpoint og sender dine indsendte oplysninger til vores supportadresse. Du kan skrive på dansk eller engelsk, og værksteder fra alle lande er velkomne til at kontakte os. Filuploads kræver stadig en backend, som kan håndtere og gemme filerne.</p>
 </body>
 </html>

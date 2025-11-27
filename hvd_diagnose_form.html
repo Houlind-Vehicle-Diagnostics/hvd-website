@@ -11,6 +11,17 @@
     fieldset {border: none; margin-bottom: 20px; padding: 0;}
     legend {font-weight: bold; margin-bottom: 10px;}
     label {display: block; margin-bottom: 5px; font-weight: bold;}
+
+    /* Style for the asterisk that marks required fields. A small margin is
+       added to separate it from the label text, and the size is bumped
+       slightly so det * står tydeligere.*/
+    .required-star {
+        margin-left: 4px;
+        font-size: 1.4em;
+        /* Give the asterisk a red colour and use !important to ensure it
+           overrides inherited label colours. */
+        color: #d9534f !important;
+    }
     input[type="text"], input[type="email"], input[type="number"], select, textarea {
         width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;
         box-sizing: border-box;
@@ -45,28 +56,28 @@
     <p class="friendly-note">Jo mere udførlige oplysninger du giver, jo bedre kan vi tilpasse vores test‑ og måleplan, og jo større er chancen for et hurtigt, præcist resultat.</p>
 <fieldset class="contact">
 <legend><span class="icon">📞</span>1. Kontaktoplysninger</legend>
-<label for="workshop">Værksted*</label>
+<label for="workshop">Værksted<span class="required-star">*</span></label>
 <input id="workshop" name="Værksted" required="" type="text"/>
-<label for="contact">Kontaktperson*</label>
+<label for="contact">Kontaktperson<span class="required-star">*</span></label>
 <input id="contact" name="Kontaktperson" required="" type="text"/>
-<label for="email">E‑mail*</label>
+<label for="email">E‑mail<span class="required-star">*</span></label>
 <input id="email" name="Email" required="" type="email"/>
 <label for="phone">Telefon</label>
 <input id="phone" name="Telefon" type="text"/>
 </fieldset>
 <fieldset class="vehicle">
 <legend><span class="icon">🚗</span>2. Bilgrunddata</legend>
-<label for="vin">VIN*</label>
+<label for="vin">VIN<span class="required-star">*</span></label>
 <input id="vin" name="VIN" required="" type="text"/>
-<label for="make">Mærke*</label>
+<label for="make">Mærke<span class="required-star">*</span></label>
 <input id="make" name="Mærke" required="" type="text"/>
-<label for="model">Model*</label>
+<label for="model">Model<span class="required-star">*</span></label>
 <input id="model" name="Model" required="" type="text"/>
-<label for="year">Årgang*</label>
+<label for="year">Årgang<span class="required-star">*</span></label>
 <input id="year" max="2100" min="1900" name="Årgang" required="" type="number"/>
-<label for="mileage">Kilometer*</label>
+<label for="mileage">Kilometer<span class="required-star">*</span></label>
 <input id="mileage" min="0" name="Kilometer" required="" type="number"/>
-<label for="fuel">Brændstof*</label>
+<label for="fuel">Brændstof<span class="required-star">*</span></label>
 <select id="fuel" name="Brændstof" required="">
 <option value="">Vælg...</option>
 <option value="Benzin">Benzin</option>
@@ -75,7 +86,7 @@
 <option value="El">El</option>
 <option value="Andet">Andet</option>
 </select>
-<label for="transmission">Gearkasse*</label>
+<label for="transmission">Gearkasse<span class="required-star">*</span></label>
 <select id="transmission" name="Gearkasse" required="">
 <option value="">Vælg...</option>
 <option value="Manuel">Manuel</option>
@@ -83,12 +94,12 @@
 <option value="CVT">CVT</option>
 <option value="Andet">Andet</option>
 </select>
-<label for="market">Marked*</label>
+<label for="market">Marked<span class="required-star">*</span></label>
 <input id="market" name="Marked" placeholder="Fx DK, EU" required="" type="text"/>
 </fieldset>
 <fieldset class="symptom">
 <legend><span class="icon">📝</span>3. Symptombeskrivelse</legend>
-<label for="symptom">Beskriv fejlen*</label>
+<label for="symptom">Beskriv fejlen<span class="required-star">*</span></label>
 <textarea id="symptom" name="Symptombeskrivelse" placeholder="Hvornår/hvordan viser fejlen sig? Under hvilke forhold? Er den reproducerbar?" required=""></textarea>
 </fieldset>
 <fieldset class="dtc">

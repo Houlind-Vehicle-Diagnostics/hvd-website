@@ -1,77 +1,145 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Houlind Vehicle Diagnostics – Ekstern diagnosetekniker til værksteder</title>
-<style>
-    body {margin: 0; font-family: Arial, sans-serif; line-height: 1.5; color: #333; background-color: #f8f8f8;}
-    .hero {background-color: #0275d8; color: #fff; padding: 60px 20px; text-align: center;}
-    .hero h1 {font-size: 2.4em; margin-bottom: 10px;}
-    .hero p {font-size: 1.2em; max-width: 700px; margin: 0 auto 20px auto;}
-    .cta-button {background-color: #f0ad4e; color: #fff; padding: 12px 24px; border: none; border-radius: 4px; font-size: 1em; cursor: pointer; text-decoration: none;}
-    .section {padding: 40px 20px; max-width: 900px; margin: auto;}
-    .features {display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;}
-    .feature {flex: 1 1 250px; background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center;}
-    .feature .icon {font-size: 2em; margin-bottom: 10px;}
-    .how-it-works ol {padding-left: 20px;}
-    .footer {background-color: #222; color: #ccc; text-align: center; padding: 20px; font-size: 0.9em;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Houlind Vehicle Diagnostics &amp; Houlind Auto</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: #0F2749;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: #F5F8FC;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #0F2749;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    footer {
+      background: #0F2749;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="hero">
-  <h1>Ekstern diagnosetekniker til værksteder</h1>
-    <p>HVD Remote Diagnostics giver dig en fagligt stærk test‑ og måleplan, når en sag driller. Send data, få en struktureret diagnoseplan og spar tid, penge og fejldele.  
-      <br><em>Vi understøtter både dansk og engelsk – værksteder fra alle lande er velkomne.</em></p>
-    <a class="cta-button" href="hvd_diagnose_form.html">Indsend en sag</a>
-</div>
 
-<div class="section">
-  <h2>Hvorfor vælge HVD?</h2>
-  <div class="features">
-    <div class="feature">
-      <div class="icon">🛠️</div>
-      <h3>Få styr på de svære sager</h3>
-      <p>Vi leverer en prioriteret testplan baseret på dine data og vores erfaring, så bilen hurtigt kommer af liften.</p>
+  <!-- Header with navigation -->
+  <header>
+    <h1>Houlind Vehicle Diagnostics</h1>
+    <nav>
+      <ul>
+        <li><a href="#remote">Remote Diagnostics</a></li>
+        <li><a href="#about">Om os</a></li>
+        <li><a href="#houlindauto">Houlind Auto</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero section for the remote diagnostics -->
+  <section class="hero" id="remote">
+    <div class="container">
+      <h2>Ekstern diagnosetekniker til dit værksted</h2>
+      <p>Har du brug for hjælp til svære fejlfindingsopgaver? Hos HVD Remote Diagnostics tilbyder vi fjernsupport og dybdegående diagnosticering til professionelle værksteder. Vores erfarne team hjælper med at løse de komplekse sager, så du kan fokusere på det, du er bedst til.</p>
+      <a href="#contact" class="cta-btn">Start en fjern-diagnose</a>
     </div>
-    <div class="feature">
-      <div class="icon">💡</div>
-      <h3>Reducer fejlkøb af dele</h3>
-      <p>En systematisk diagnoseplan minimerer gætterier og unødvendige udskiftninger – til gavn for både værksted og kunde.</p>
+  </section>
+
+  <!-- About section explaining the brand and relationship with Houlind Auto -->
+  <section id="about">
+    <div class="container">
+      <h2>Om HVD</h2>
+      <p>Houlind Vehicle Diagnostics (HVD) er stiftet af Lars Houlind, uddannet mekaniker og specialist i moderne bilteknologi. Efter mange år med egen værkstedserfaring opstod behovet for en ekstern diagnoseløsning til andre værksteder. Med HVD tilbyder vi derfor fjern-diagnose, sparring og teststrategier til værksteder i hele landet.</p>
+      <p>Vi driver selv <a href="#houlindauto">Houlind Auto &amp; Mekanik</a> i Videbæk – vores lokale værksted fungerer som udviklingslab for HVD. Det betyder, at alle vores metoder, målinger og strategier er afprøvet i virkeligheden. HVD er udelukkende en B2B-service; vi tager ikke direkte imod private fjernopgaver.</p>
+      <p>Målet med HVD er at gøre avanceret fejlsøgning nemmere og hurtigere for andre værksteder. Vi er ikke en konkurrent til dig – vi er din eksterne diagnosetekniker.</p>
     </div>
-    <div class="feature">
-      <div class="icon">⏱️</div>
-      <h3>Spar tid og behold kunden</h3>
-      <p>Du behøver ikke vente på underleverandører eller mærkeværksteder. Hold bilen hos dig med en struktureret fjern‑diagnose.</p>
+  </section>
+
+  <!-- Houlind Auto subpage section -->
+  <section id="houlindauto">
+    <div class="container">
+      <h2>Houlind Auto &amp; Mekanik – dit lokale værksted i Videbæk</h2>
+      <p>Vi servicerer og reparerer alle bilmærker med fokus på kvalitet og gennemsigtighed. Som en del af Houlind-familien har vi direkte adgang til HVD’s diagnose-center, hvilket gør os ekstra stærke i el, elektronik og svære fejl.</p>
+      <ul>
+        <li>Service og reparation af alle typer person- og varebiler</li>
+        <li>Avanceret diagnostik med adgang til HVD's ekspertise</li>
+        <li>Råd om både klassiske og moderne hybrid-/el-biler</li>
+        <li>Venlig betjening, ærlige priser og lokalt engagement</li>
+      </ul>
+      <p>Har du brug for service på din bil? <strong>Kontakt os</strong> og få et uforpligtende tilbud.</p>
     </div>
-  </div>
-</div>
+  </section>
 
-<div class="section how-it-works">
-  <h2>Sådan fungerer det</h2>
-  <ol>
-    <li><strong>Send din sag.</strong> Udfyld vores diagnoseformular med bilens oplysninger, symptomer og data.</li>
-    <li><strong>Få DataScore og diagnoseplan.</strong> Vi vurderer datakvaliteten og leverer en skriftlig test‑ og måleplan.</li>
-    <li><strong>Udfør testen.</strong> Følg måleplanen i værkstedet og vend tilbage til os med resultaterne ved behov.</li>
-  </ol>
-  <p style="text-align:center;"><a class="cta-button" href="hvd_diagnose_form.html">Indsend en sag nu</a></p>
-</div>
+  <!-- Contact section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <p>Udfyld formularen eller ring til os for at høre mere. Vi vender hurtigt tilbage med en plan for din opgave.</p>
+      <p><strong>E-mail:</strong> <a href="mailto:info@hvd.dk">info@hvd.dk</a><br>
+         <strong>Telefon:</strong> 12 34 56 78<br>
+         <strong>Adresse:</strong> Industrivej 7, 6920 Videbæk</p>
+    </div>
+  </section>
 
-<!-- DataScore & triage section -->
-<div class="section datascore">
-  <h2>DataScore og triage</h2>
-  <p>For hver sag beregner vi en DataScore mellem 0 og 100 baseret på den information, du sender. Denne score afgør, hvor hurtigt vi kan hjælpe dig:</p>
-  <ul>
-    <li><strong>High (≥70)</strong> – tilstrækkelige data er til rådighed. Vi udarbejder en komplet test‑ og måleplan med kortest mulig svartid.</li>
-    <li><strong>Medium (40–69)</strong> – vi kan påbegynde en plan, men mangler enkelte oplysninger. Du bliver måske bedt om at sende supplerende data.</li>
-    <li><strong>Low (&lt;40)</strong> – vi har brug for flere oplysninger (fx VIN, DTC, logfiler eller billeder) før vi kan påbegynde arbejdet.</li>
-  </ul>
-  <p>Jo mere præcise data du angiver, desto højere DataScore og hurtigere assistance.</p>
-</div>
+  <footer>
+    <p>&copy; 2025 Houlind Vehicle Diagnostics &amp; Houlind Auto &amp; Mekanik. Alle rettigheder forbeholdes.</p>
+  </footer>
 
-<div class="footer">
-  <p>© 2025 Houlind Vehicle Diagnostics – Alle rettigheder forbeholdes.</p>
-  <p>Vi taler dansk og engelsk og betjener værksteder i hele verden.</p>
-</div>
 </body>
 </html>

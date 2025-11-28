@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Houlind Vehicle Diagnostics – Ekstern diagnosetekniker til værksteder</title>
+<style>
+    body {margin: 0; font-family: Arial, sans-serif; line-height: 1.5; color: #333; background-color: #f8f8f8;}
+    .hero {background-color: #0275d8; color: #fff; padding: 60px 20px; text-align: center;}
+    .hero h1 {font-size: 2.4em; margin-bottom: 10px;}
+    .hero p {font-size: 1.2em; max-width: 700px; margin: 0 auto 20px auto;}
+    .cta-button {background-color: #f0ad4e; color: #fff; padding: 12px 24px; border: none; border-radius: 4px; font-size: 1em; cursor: pointer; text-decoration: none; display: inline-block;}
+    .section {padding: 40px 20px; max-width: 900px; margin: auto;}
+    .features {display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;}
+    .feature {flex: 1 1 250px; background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center;}
+    .feature .icon {font-size: 2em; margin-bottom: 10px;}
+    .how-it-works ol {padding-left: 20px;}
+    .footer {background-color: #222; color: #ccc; text-align: center; padding: 20px; font-size: 0.9em;}
+</style>
+</head>
+<body>
+<!-- Language selector row -->
+<div style="background:#f8f8f8; text-align:right; padding:10px 20px;">
+  <label for="language-select">Sprog / Language:</label>
+  <select id="language-select">
+    <option value="da">Dansk</option>
+    <option value="en">English</option>
+  </select>
+</div>
+
+<div class="hero">
+  <h1 id="hero-heading">Ekstern diagnosetekniker til værksteder</h1>
+  <p id="hero-paragraph">HVD Remote Diagnostics giver dig en fagligt stærk test‑ og måleplan, når en sag driller. Send data, få en struktureret diagnoseplan og spar tid, penge og fejldele.<br><em>Vi understøtter både dansk og engelsk – værksteder fra alle lande er velkomne.</em></p>
+  <a class="cta-button" id="cta-main" href="hvd_diagnose_form.html">Indsend en sag</a>
+</div>
+
+<div class="section">
+  <h2 id="why-heading">Hvorfor vælge HVD?</h2>
+  <div class="features">
+    <div class="feature">
+      <div class="icon">🛠️</div>
+      <h3 id="feat1-title">Få styr på de svære sager</h3>
+      <p id="feat1-text">Vi leverer en prioriteret testplan baseret på dine data og vores erfaring, så bilen hurtigt kommer af liften.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">💡</div>
+      <h3 id="feat2-title">Reducer fejlkøb af dele</h3>
+      <p id="feat2-text">En systematisk diagnoseplan minimerer gætterier og unødvendige udskiftninger – til gavn for både værksted og kunde.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">⏱️</div>
+      <h3 id="feat3-title">Spar tid og behold kunden</h3>
+      <p id="feat3-text">Du behøver ikke vente på underleverandører eller mærkeværksteder. Hold bilen hos dig med en struktureret fjern‑diagnose.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section how-it-works">
+  <h2 id="how-heading">Sådan fungerer det</h2>
+  <ol>
+    <li id="step1"><strong>Send din sag.</strong> Udfyld vores diagnoseformular med bilens oplysninger, symptomer og data.</li>
+    <li id="step2"><strong>Få DataScore og diagnoseplan.</strong> Vi vurderer datakvaliteten og leverer en skriftlig test‑ og måleplan.</li>
+    <li id="step3"><strong>Udfør testen.</strong> Følg måleplanen i værkstedet og vend tilbage til os med resultaterne ved behov.</li>
+  </ol>
+  <p style="text-align:center;"><a class="cta-button" id="cta-second" href="hvd_diagnose_form.html">Indsend en sag nu</a></p>
+</div>
+
+<!-- DataScore & triage section -->
+<div class="section datascore">
+  <h2 id="datascore-heading">DataScore og triage</h2>
+  <p id="datascore-intro">For hver sag beregner vi en DataScore mellem 0 og 100 baseret på den information, du sender. Denne score afgør, hvor hurtigt vi kan hjælpe dig:</p>
+  <ul>
+    <li id="high-text"><strong>High (≥70)</strong> – tilstrækkelige data er til rådighed. Vi udarbejder en komplet test‑ og måleplan med kortest mulig svartid.</li>
+    <li id="medium-text"><strong>Medium (40–69)</strong> – vi kan påbegynde en plan, men mangler enkelte oplysninger. Du bliver måske bedt om at sende supplerende data.</li>
+    <li id="low-text"><strong>Low (<40)</strong> – vi har brug for flere oplysninger (fx VIN, DTC, logfiler eller billeder) før vi kan påbegynde arbejdet.</li>
+  </ul>
+  <p id="datascore-note">Jo mere præcise data du angiver, desto højere DataScore og hurtigere assistance.</p>
+</div>
+
+<div class="footer">
+  <p id="footer-copy">© 2025 Houlind Vehicle Diagnostics – Alle rettigheder forbeholdes.</p>
+  <p id="footer-note">Vi taler dansk og engelsk og betjener værksteder i hele verden.</p>
+</div>
+
+<script>
+const translations = {
+  'hero-heading': { da: 'Ekstern diagnosetekniker til værksteder', en: 'Remote diagnostics technician for workshops' },
+  'hero-paragraph': { da: 'HVD Remote Diagnostics giver dig en fagligt stærk test‑ og måleplan, når en sag driller. Send data, få en struktureret diagnoseplan og spar tid, penge og fejldele.<br><em>Vi understøtter både dansk og engelsk – værksteder fra alle lande er velkomne.</em>', en: 'HVD Remote Diagnostics provides you with a technically solid test and measurement plan when a case gets tricky. Send data, get a structured diagnostic plan and save time, money and incorrect parts.<br><em>We support both Danish and English – workshops from all countries are welcome.</em>' },
+  'cta-main': { da: 'Indsend en sag', en: 'Submit a case' },
+  'why-heading': { da: 'Hvorfor vælge HVD?', en: 'Why choose HVD?' },
+  'feat1-title': { da: 'Få styr på de svære sager', en: 'Master the difficult cases' },
+  'feat1-text': { da: 'Vi leverer en prioriteret testplan baseret på dine data og vores erfaring, så bilen hurtigt kommer af liften.', en: 'We provide a prioritised test plan based on your data and our experience so the car quickly gets off the lift.' },
+  'feat2-title': { da: 'Reducer fejlkøb af dele', en: 'Reduce faulty parts purchases' },
+  'feat2-text': { da: 'En systematisk diagnoseplan minimerer gætterier og unødvendige udskiftninger – til gavn for både værksted og kunde.', en: 'A systematic diagnostic plan minimises guesswork and unnecessary replacements – benefiting both workshop and customer.' },
+  'feat3-title': { da: 'Spar tid og behold kunden', en: 'Save time and keep the customer' },
+  'feat3-text': { da: 'Du behøver ikke vente på underleverandører eller mærkeværksteder. Hold bilen hos dig med en struktureret fjern‑diagnose.', en: 'You don’t need to wait for subcontractors or brand workshops. Keep the car with you using structured remote diagnostics.' },
+  'how-heading': { da: 'Sådan fungerer det', en: 'How it works' },
+  'step1': { da: '<strong>Send din sag.</strong> Udfyld vores diagnoseformular med bilens oplysninger, symptomer og data.', en: '<strong>Send your case.</strong> Fill out our diagnostic form with vehicle details, symptoms and data.' },
+  'step2': { da: '<strong>Få DataScore og diagnoseplan.</strong> Vi vurderer datakvaliteten og leverer en skriftlig test‑ og måleplan.', en: '<strong>Get DataScore and diagnostic plan.</strong> We assess the data quality and deliver a written test and measurement plan.' },
+  'step3': { da: '<strong>Udfør testen.</strong> Følg måleplanen i værkstedet og vend tilbage til os med resultaterne ved behov.', en: '<strong>Perform the test.</strong> Follow the measurement plan in the workshop and return to us with the results if needed.' },
+  'cta-second': { da: 'Indsend en sag nu', en: 'Submit a case now' },
+  'datascore-heading': { da: 'DataScore og triage', en: 'DataScore and triage' },
+  'datascore-intro': { da: 'For hver sag beregner vi en DataScore mellem 0 og 100 baseret på den information, du sender. Denne score afgør, hvor hurtigt vi kan hjælpe dig:', en: 'For every case we calculate a DataScore between 0 and 100 based on the information you provide. This score determines how quickly we can help you:' },
+  'high-text': { da: '<strong>High (≥70)</strong> – tilstrækkelige data er til rådighed. Vi udarbejder en komplet test‑ og måleplan med kortest mulig svartid.', en: '<strong>High (≥70)</strong> – sufficient data is available. We prepare a complete test and measurement plan with the shortest possible response time.' },
+  'medium-text': { da: '<strong>Medium (40–69)</strong> – vi kan påbegynde en plan, men mangler enkelte oplysninger. Du bliver måske bedt om at sende supplerende data.', en: '<strong>Medium (40–69)</strong> – we can start a plan but we are missing some information. You may be asked to send additional data.' },
+  'low-text': { da: '<strong>Low (<40)</strong> – vi har brug for flere oplysninger (fx VIN, DTC, logfiler eller billeder) før vi kan påbegynde arbejdet.', en: '<strong>Low (<40)</strong> – we need more information (e.g., VIN, DTC, log files or images) before we can start the work.' },
+  'datascore-note': { da: 'Jo mere præcise data du angiver, desto højere DataScore og hurtigere assistance.', en: 'The more precise data you provide, the higher the DataScore and the faster the assistance.' },
+  'footer-copy': { da: '© 2025 Houlind Vehicle Diagnostics – Alle rettigheder forbeholdes.', en: '© 2025 Houlind Vehicle Diagnostics – All rights reserved.' },
+  'footer-note': { da: 'Vi taler dansk og engelsk og betjener værksteder i hele verden.', en: 'We speak Danish and English and serve workshops worldwide.' }
+};
+
+function updateLanguage(lang) {
+  for (const key in translations) {
+    const el = document.getElementById(key);
+    if (el) {
+      el.innerHTML = translations[key][lang];
+    }
+  }
+}
+
+document.getElementById('language-select').addEventListener('change', function(e) {
+  updateLanguage(e.target.value);
+});
+</script>
+</body>
+</html>
